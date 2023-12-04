@@ -1,0 +1,58 @@
+[
+  {
+    "address": "0x8390a1da07e376ef7add4be859ba74fb83aa02d5",
+    "marketCap": "107922818.99883",
+    "name": "GROK",
+    "symbol": "GROK",
+    "volume": "19464722"
+  },
+  {
+    "address": "0xba386a4ca26b85fd057ab1ef86e3dc7bdeb5ce70",
+    "marketCap": "270926297.87222195129592435",
+    "name": "Jesus Coin",
+    "symbol": "JESUS",
+    "volume": "9061878"
+  },
+  {
+    "address": "0x12c51b8f1b8a98c70fe6ae45c158a78931423e4c",
+    "marketCap": "4004121.15354",
+    "name": "XCeption",
+    "symbol": "XCEPT",
+    "volume": "381682"
+  },
+  {
+    "address": "0xa9e8acf069c58aec8825542845fd754e41a9489a",
+    "marketCap": "12393286.680790858018",
+    "name": "pepeCoin",
+    "symbol": "pepecoin",
+    "volume": "778639"
+  },
+  {
+    "address": "0x38e382f74dfb84608f3c1f10187f6bef5951de93",
+    "marketCap": "26615389.355155249997821973484472224339",
+    "name": "MUBI",
+    "symbol": "MUBI",
+    "volume": "1717410"
+  },
+  {
+    "address": "0xe9a97b0798b1649045c1d7114f8c432846828404",
+    "marketCap": "6949401.603115812",
+    "name": "Froge",
+    "symbol": "FROGE",
+    "volume": "4160498"
+  },
+  {
+    "address": "0x81db1949d0e888557bc632f7c0f6698b1f8c9106",
+    "marketCap": "2153067.11143",
+    "name": "d/acc",
+    "symbol": "D/ACC",
+    "volume": "877652"
+  },
+  {
+    "address": "0x2d9d7c64f6c00e16c28595ec4ebe4065ef3a250b",
+    "marketCap": "11322696.012678",
+    "name": "go fu*k yourself.",
+    "symbol": "GFY",
+    "volume": "6728618"
+  }
+]

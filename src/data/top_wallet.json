@@ -1,0 +1,52 @@
+{
+  "GROK": [
+    {
+      "wallet_address": "0x3cc936b795a188f0e246cbb2d74c5bd190aecf18",
+      "balance": 19796.878335166017
+    },
+    {
+      "wallet_address": "0xf80642eb48d9e4ab64053690aa4f6e96254451ce",
+      "balance": 116.57018329123407
+    }
+  ],
+  "Jesus Coin": [],
+  "XCeption": [],
+  "pepeCoin": [
+    {
+      "wallet_address": "0x6ac6585894967a9bead50bd97e53ca2b0e9e32af",
+      "balance": 113.4179701663896
+    }
+  ],
+  "MUBI": [
+    {
+      "wallet_address": "0x3cc936b795a188f0e246cbb2d74c5bd190aecf18",
+      "balance": 19796.878335166017
+    },
+    {
+      "wallet_address": "0x75e89d5979e4f6fba9f97c104c2f0afb3f1dcb88",
+      "balance": 2304.510119476301
+    }
+  ],
+  "Froge": [
+    {
+      "wallet_address": "0xf80642eb48d9e4ab64053690aa4f6e96254451ce",
+      "balance": 116.57018329123407
+    },
+    {
+      "wallet_address": "0x6d9148e201304aa9cca58a759a134a3fb58fe718",
+      "balance": 3.490592378364302
+    }
+  ],
+  "d/acc": [
+    {
+      "wallet_address": "0x03770b07c5c315722c5866e64cde04e6e5793714",
+      "balance": 2.32614508093946
+    }
+  ],
+  "go fu*k yourself.": [
+    {
+      "wallet_address": "0x75e89d5979e4f6fba9f97c104c2f0afb3f1dcb88",
+      "balance": 2304.510119476301
+    }
+  ]
+}
