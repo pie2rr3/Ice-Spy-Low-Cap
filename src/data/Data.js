@@ -4,12 +4,12 @@ const fs = require('fs');
 const API_KEY = '21167c5b4f84577f563557ba87ec6e86a33b69a5';
 const API_URL = 'https://graph.defined.fi/graphql';
 
-async function getTopTokens() {
+async function getTopTokens(limit = 50) {
   try {
     const response = await axios.post(API_URL, {
       query: `
         {
-          listTopTokens(limit: 10, networkFilter: [1], resolution: "1D") {
+          listTopTokens(limit: ${limit}, networkFilter: [1], resolution: "1D") {
             address
             marketCap
             name
@@ -51,8 +51,11 @@ async function collectCryptoData() {
   }
 }
 
-(async function main() {
+async function main() {
   console.log('Starting crypto data collection...');
   await collectCryptoData();
   console.log('Crypto data collection completed.');
-})();
+}
+
+module.exports = main;
+

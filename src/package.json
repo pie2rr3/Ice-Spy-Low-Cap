@@ -21,5 +21,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "pie2rr3",
-  "license": "ISC"
+  "license": "ISC",
+
+  "bin": {
+    "Ice-Spy": "C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\Main.js"
+  }
+  
+  
 }

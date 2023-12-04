@@ -1,0 +1,93 @@
+[
+  {
+    "address": "0x64bc2ca1be492be7185faa2c8835d9b824c8a194",
+    "marketCap": "4040557470.185",
+    "name": "Big Time",
+    "symbol": "BIGTIME",
+    "volume": "4046906"
+  },
+  {
+    "address": "0xc0200b1c6598a996a339196259ffdc30c1f44339",
+    "marketCap": "3127010.079195",
+    "name": "EI Risitas",
+    "symbol": "KEK",
+    "volume": "5306366"
+  },
+  {
+    "address": "0x8390a1da07e376ef7add4be859ba74fb83aa02d5",
+    "marketCap": "78657620.60883",
+    "name": "GROK",
+    "symbol": "GROK",
+    "volume": "7027853"
+  },
+  {
+    "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+    "marketCap": "585027843.742197746081024808799384338217462",
+    "name": "Pepe",
+    "symbol": "PEPE",
+    "volume": "16182893"
+  },
+  {
+    "address": "0x046eee2cc3188071c02bfc1745a6b17c656e3f3d",
+    "marketCap": "491635309.244536325162",
+    "name": "Rollbit Coin",
+    "symbol": "RLB",
+    "volume": "8796502"
+  },
+  {
+    "address": "0x2d9d7c64f6c00e16c28595ec4ebe4065ef3a250b",
+    "marketCap": "9573477.348501",
+    "name": "go fu*k yourself.",
+    "symbol": "GFY",
+    "volume": "3291108"
+  },
+  {
+    "address": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55",
+    "marketCap": "697546763.012815655900161142275194671338",
+    "name": "SuperFarm",
+    "symbol": "SUPER",
+    "volume": "8528312"
+  },
+  {
+    "address": "0xba386a4ca26b85fd057ab1ef86e3dc7bdeb5ce70",
+    "marketCap": "257349695.546221964872526676",
+    "name": "Jesus Coin",
+    "symbol": "JESUS",
+    "volume": "1864303"
+  },
+  {
+    "address": "0x38e382f74dfb84608f3c1f10187f6bef5951de93",
+    "marketCap": "40419753.734277676072456303178799862909",
+    "name": "MUBI",
+    "symbol": "MUBI",
+    "volume": "5045224"
+  },
+  {
+    "address": "0x60927b83ddd2096f38f22a8a2d84cf863402d1a1",
+    "marketCap": "2171344.58465",
+    "name": "Eternal AI",
+    "symbol": "MIND",
+    "volume": "610503"
+  },
+  {
+    "address": "0xd5fa38027462691769b8a8ba6c444890103b5b94",
+    "marketCap": "8873286.64215",
+    "name": "Dawg Coin",
+    "symbol": "DAWG",
+    "volume": "3657882"
+  },
+  {
+    "address": "0x12c51b8f1b8a98c70fe6ae45c158a78931423e4c",
+    "marketCap": "7587669.81975",
+    "name": "XCeption",
+    "symbol": "XCEPT",
+    "volume": "446237"
+  },
+  {
+    "address": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
+    "marketCap": "675003728.7675429054051254297465637199896",
+    "name": "Beam",
+    "symbol": "BEAM",
+    "volume": "4852299"
+  }
+]
