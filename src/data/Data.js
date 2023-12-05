@@ -40,22 +40,25 @@ async function getTopTokens(limit = 50) {
   }
 }
 
-async function collectCryptoData() {
-  const topTokens = await getTopTokens();
+async function collectCryptoData(limit = 50) {  
+  const topTokens = await getTopTokens(limit);
 
-  if (topTokens.length > 0) {
-    fs.writeFileSync('top_trending_tokens.json', JSON.stringify(topTokens, null, 2));
+  const filteredTokens = topTokens.slice(0, limit); 
+  if (filteredTokens.length > 0) {
+    fs.writeFileSync('/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_trending_tokens.json', JSON.stringify(filteredTokens, null, 2));
     console.log('Crypto data collection completed. Data saved to top_trending_tokens.json');
   } else {
     console.log('No data to save.');
   }
 }
 
-async function main() {
+async function main(limit = 50) {  
   console.log('Starting crypto data collection...');
-  await collectCryptoData();
+  await collectCryptoData(limit);
   console.log('Crypto data collection completed.');
 }
 
 module.exports = main;
+
+// main();
 
