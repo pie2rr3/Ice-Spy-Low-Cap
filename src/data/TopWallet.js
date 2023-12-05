@@ -3,8 +3,8 @@ const fs = require('fs');
 
 const ETHERSCAN_API_KEY = "1S7HW5655DWV8BHKSIKD3F6XC2NJ4MBWWH";
 const ETHERSCAN_API_URL = 'https://api.etherscan.io/api';
-const TOP_HOLDERS_FILE = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_holders.json';
-const OUTPUT_FILE = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_wallet.json';
+const TOP_HOLDERS_FILE = 'C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\json\\top_holders.json';
+const OUTPUT_FILE = 'C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\json\\top_wallet.json';
 
 async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

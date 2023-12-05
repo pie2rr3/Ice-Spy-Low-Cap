@@ -3,8 +3,8 @@ const fs = require('fs');
 
 const API_KEY_ETHERSCAN = '1S7HW5655DWV8BHKSIKD3F6XC2NJ4MBWWH';
 const API_KEY_COVALENT = 'cqt_rQdhGV6KmvHfTHBGVxJCgcyB3Tv9';
-const TOP_WALLETS_FILE_PATH = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_wallet.json';
-const OUTPUT_FILE_PATH = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_performer.json';
+const TOP_WALLETS_FILE_PATH = 'C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\json\\top_wallet.json';
+const OUTPUT_FILE_PATH = 'C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\json\\top_performer.json';
 const BASE_URL_ETHERSCAN = `https://api.etherscan.io/api`;
 
 async function fetchTokenTransactions(walletAddress) {

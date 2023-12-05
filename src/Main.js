@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-const collectCryptoData = require('/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/Data.js');
-const processTopTokens = require('/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/TopHolders.js');
-const filterTopWallets = require('/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/TopWallet.js');
-const analyzeTopPerformer = require('/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/TopPerformer.js');
+const collectCryptoData = require('C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\Data.js');
+const processTopTokens = require('C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\TopHolders.js');
+const filterTopWallets = require('C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\TopWallet.js');
+const analyzeTopPerformer = require('C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\TopPerformer.js');
+
 
 const readline = require('readline').createInterface({
     input: process.stdin,

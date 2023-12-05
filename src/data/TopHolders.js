@@ -4,8 +4,8 @@ const { Alchemy, Network } = require("alchemy-sdk");
 
 const CHAINBASE_API_URL = 'https://api.chainbase.online/v1/token/top-holders';
 const CHAINBASE_API_KEY = '2YrYygb1gOscIeNsPEwlzY7k6ga';
-const TRENDING_TOKENS_FILE = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_trending_tokens.json';
-const OUTPUT_FILE = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_holders.json';
+const TRENDING_TOKENS_FILE = 'C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\json\\top_trending_tokens.json';
+const OUTPUT_FILE = 'C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\json\\top_holders.json';
 
 const config = {
     apiKey: "iXuyrFvGvM4aS1JqMJN2Xi-xYPj60qt7",
