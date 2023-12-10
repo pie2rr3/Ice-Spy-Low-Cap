@@ -1,3 +1,14 @@
 {
-  "TURT": []
+  "enqAI": [
+    {
+      "wallet_address": "0x2f104e19f3e326743c92648c4e8428bac9af7951",
+      "balance": 0.04747945347950436
+    },
+    {
+      "wallet_address": "0x8b6d1618396a6f01067ae0a5239c39cfb843f327",
+      "balance": 0.04678002418750581
+    }
+  ],
+  "BOB": [],
+  "RabbitX": []
 }

@@ -45,7 +45,7 @@ async function collectCryptoData(limit = 50) {
 
   const filteredTokens = topTokens.slice(0, limit); 
   if (filteredTokens.length > 0) {
-    fs.writeFileSync('C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\json\\top_trending_tokens.json', JSON.stringify(filteredTokens, null, 2));
+    fs.writeFileSync('/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_trending_tokens.json', JSON.stringify(filteredTokens, null, 2));
     console.log('Crypto data collection completed. Data saved to top_trending_tokens.json');
   } else {
     console.log('No data to save.');

@@ -1,10 +1,62 @@
 {
-  "TURT": [
+  "enqAI": [
     {
-      "amount": "22647972.913037879920290102",
-      "original_amount": "22647972913037879920290102",
+      "amount": "53590279.540538931183013959",
+      "original_amount": "53590279540538931183013959",
       "usd_value": "0.000000",
-      "wallet_address": "0x79db69ab1ed51261a9fdc3bf0e6db3fa48b8cc52"
+      "wallet_address": "0xeb627fcf91a920b3648eced741373b4cf0e20622"
+    },
+    {
+      "amount": "39577139.750000000000000000",
+      "original_amount": "39577139750000000000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0x2f104e19f3e326743c92648c4e8428bac9af7951"
+    },
+    {
+      "amount": "38824542.460820090000000000",
+      "original_amount": "38824542460820090000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0xa4203f0d44ed75edc18471be1e1f770a3210f22c"
+    },
+    {
+      "amount": "24587034.550828800000000000",
+      "original_amount": "24587034550828800000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0x8b6d1618396a6f01067ae0a5239c39cfb843f327"
+    }
+  ],
+  "BOB": [
+    {
+      "amount": "90561221871.419056575336113566",
+      "original_amount": "90561221871419056575336113566",
+      "usd_value": "2716836.587510",
+      "wallet_address": "0xd6216fc19db775df9774a6e33526131da7d19a2c"
+    },
+    {
+      "amount": "65522809854.362665855887330869",
+      "original_amount": "65522809854362665855887330869",
+      "usd_value": "1965684.245974",
+      "wallet_address": "0x3cc936b795a188f0e246cbb2d74c5bd190aecf18"
+    },
+    {
+      "amount": "60011395390.588888503113735033",
+      "original_amount": "60011395390588888503113735033",
+      "usd_value": "1800341.816237",
+      "wallet_address": "0xf89d7b9c864f589bbf53a82105107622b35eaa40"
+    }
+  ],
+  "RabbitX": [
+    {
+      "amount": "24173095.882634708996057310",
+      "original_amount": "24173095882634708996057310",
+      "usd_value": "5765670.207486",
+      "wallet_address": "0x5aa4e90dc2452195a5e5654f549df0f2bc5d9996"
+    },
+    {
+      "amount": "20219699.580388750322901510",
+      "original_amount": "20219699580388750322901510",
+      "usd_value": "4822721.923621",
+      "wallet_address": "0x1025dfb14f3f18f68093c7cd071757b1baf7f54f"
     }
   ]
 }

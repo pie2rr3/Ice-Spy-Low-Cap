@@ -7,13 +7,10 @@ const { parse } = require('json2csv');
 async function findWhales(driver, contractAddress, tokenName, minimumBalance, limit = 5) {
     await driver.get(`https://etherscan.io/token/generic-tokenholders2?a=${contractAddress}`);
   
-    // Attendre que les données des détenteurs de tokens soient chargées
     await driver.wait(until.elementLocated(By.css('.table > tbody > tr')), 10000);
   
-    // Obtenir toutes les lignes du tableau
     const rows = await driver.findElements(By.css('.table > tbody > tr'));
   
-    // Filtrer les whales en fonction de leur solde
     const whales = [];
     const whaleAddresses = {};
   
@@ -43,7 +40,6 @@ async function findWhales(driver, contractAddress, tokenName, minimumBalance, li
 
 
 async function main() {
-  // Ajouter les options pour le navigateur Firefox
   const firefoxOptions = new firefox.Options();
   firefoxOptions.addArguments('-headless');
 
@@ -71,7 +67,6 @@ async function main() {
 
         console.log('Whales trouvées:', whales);
 
-        // Enregistrement des résultats dans un fichier CSV
         const fields = ['token', 'address', 'balance'];
         const csvData = parse(whales, { fields });
         fs.writeFileSync('C:\\Users\\Olivi\\OneDrive\\Bureau\\XD\\Bots\\Ice Spy\\Wallets\\Whales_ETH.csv', csvData);

@@ -3,13 +3,13 @@ const fs = require('fs');
 
 const API_KEY_ETHERSCAN = '1S7HW5655DWV8BHKSIKD3F6XC2NJ4MBWWH';
 const API_KEY_COVALENT = 'cqt_rQdhGV6KmvHfTHBGVxJCgcyB3Tv9';
-const TOP_WALLETS_FILE_PATH = 'C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\json\\top_wallet.json';
-const OUTPUT_FILE_PATH = 'C:\\Users\\Olivi\\OneDrive\\Bureau\\Github\\Ice-Spy-Low-Cap\\src\\data\\json\\top_performer.json';
+const TOP_WALLETS_FILE_PATH = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_wallet.json';
+const OUTPUT_FILE_PATH = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_performer.json';
 const BASE_URL_ETHERSCAN = `https://api.etherscan.io/api`;
 
 async function fetchTokenTransactions(walletAddress) {
     try {
-        const response = await axios.get(`${BASE_URL_ETHERSCAN}?module=account&action=tokentx&address=${walletAddress}&page=1&offset=10&sort=desc&apikey=${API_KEY_ETHERSCAN}`);
+        const response = await axios.get(`${BASE_URL_ETHERSCAN}?module=account&action=tokentx&address=${walletAddress}&page=1&offset=20&sort=desc&apikey=${API_KEY_ETHERSCAN}`);
         return response.data.result;
     } catch (error) {
         console.error('Error fetching token transactions:', error);
@@ -64,7 +64,7 @@ async function fetchHistoricalPrice(chainName, quoteCurrency, contractAddress, d
 
 function formatDate(timestamp) {
     const date = new Date(timestamp * 1000);
-    return date.toISOString().split('T')[0]; 
+    return date.toISOString().split('T')[0];
 }
 
 async function enrichTransactionsWithPrices(classifiedTransactions) {
@@ -136,24 +136,25 @@ async function main() {
         });
     }
 
-    let filteredWalletCount = 0;
+    let walletIndex = 0;
+    const totalWallets = walletAddresses.size;
 
     for (const walletAddress of walletAddresses) {
-        console.log(`Analyzing wallet: ${walletAddress}`);
+        console.log(`Analyse complète du wallet ${walletAddress} (${walletIndex + 1}/${totalWallets})`);
         const analysis = await analyzeWallet(walletAddress);
         const profitability = (analysis.profitableTrades / analysis.totalTrades) * 100;
 
         if (analysis.profitableTrades >= 3 && profitability >= 60) {
             filteredWallets[walletAddress] = analysis.profits;
-            filteredWalletCount++;
         }
 
-        console.log(`Completed analysis for wallet: ${walletAddress}`);
+        walletIndex++;
     }
 
     fs.writeFileSync(OUTPUT_FILE_PATH, JSON.stringify(filteredWallets, null, 2));
-    console.log(`Filtered ${filteredWalletCount} wallets that meet the criteria.`);
+    console.log(`Filtered ${walletIndex} wallets that meet the criteria.`);
     console.log(`All wallet analyses saved to ${OUTPUT_FILE_PATH}`);
 }
 
-module.exports = main;
+module.exports = main
+// main();

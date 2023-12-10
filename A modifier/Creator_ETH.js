@@ -26,7 +26,6 @@ async function processAddresses(driver, addresses) {
 
     await driver.navigate().back();
 
-    // Ajoutez un délai de 5 secondes entre les requêtes pour éviter d'être bloqué par Etherscan
     await driver.sleep(5000);
   }
 

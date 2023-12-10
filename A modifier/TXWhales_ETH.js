@@ -35,7 +35,7 @@ async function collectTop15TransactionWallets(address) {
   const url = `https://www.dextools.io/app/en/ether/pair-explorer/${address}`;
   await driver.get(url);
 
-  await driver.sleep(10000); // Attendre 10 secondes
+  await driver.sleep(10000); 
 
   try {
     const closeButton = await driver.findElement(
@@ -44,7 +44,7 @@ async function collectTop15TransactionWallets(address) {
       )
     );
     await closeButton.click();
-    await driver.sleep(2000); // Attendre 2 secondes
+    await driver.sleep(2000); 
   } catch (error) {
     console.log(
       "Le bouton de fermeture n'a pas été trouvé, en continuant sans fermer le panneau."
@@ -57,12 +57,12 @@ async function collectTop15TransactionWallets(address) {
     )
   );
   await driver.executeScript("arguments[0].scrollIntoView(true);", sortButton);
-  await driver.sleep(1000); // Attendre 1 seconde
+  await driver.sleep(1000); 
   await sortButton.click();
-  await driver.sleep(1000); // Attendre 1 seconde
+  await driver.sleep(1000); 
   await sortButton.click();
 
-  await driver.sleep(5000); // Attendre 5 secondes
+  await driver.sleep(5000); 
 
   for (let i = 1; i <= 15; i++) {
     try {
@@ -98,7 +98,6 @@ async function collectTop15TransactionWallets(address) {
       );
     }
   
-    // Fermer le navigateur à la fin du traitement
     await driver.quit();
   }
   

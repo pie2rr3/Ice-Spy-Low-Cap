@@ -1,1 +1,176 @@
-{}
+{
+  "0xcce6b8f81dbdc645bec9af92b9fd256ec64da6f8": {
+    "Total PnL": "355850.19",
+    "Missing Prices": []
+  },
+  "0xeb627fcf91a920b3648eced741373b4cf0e20622": {
+    "Total PnL": "22153937.12",
+    "Missing Prices": [
+      "0xb7a0bebfbdebeb03030559db080f14ab549badc3cb26491cf7aaf6001634dd45",
+      "0xbfbdb377da114f798190ee8b24a6f1440f863fc0fba8a0df53dbedc71792d318",
+      "0xa27c77cdd898edc72192fd07357f1ca3eef6c52ae981e414b4b1054d9b235dd5"
+    ]
+  },
+  "0x2f104e19f3e326743c92648c4e8428bac9af7951": {
+    "Total PnL": "386426.82",
+    "Missing Prices": [
+      "0xb4d95811e77d162ed9d19a639c2ef7d63da5ae518959ca8a8bda662b12b46a84"
+    ]
+  },
+  "0x8b6d1618396a6f01067ae0a5239c39cfb843f327": {
+    "Total PnL": "343726.86",
+    "Missing Prices": []
+  },
+  "0x27b4b37c6d4ac54b3f983f47d5b65dc0daea0244": {
+    "Total PnL": "214610.73",
+    "Missing Prices": [
+      "0xb4d95811e77d162ed9d19a639c2ef7d63da5ae518959ca8a8bda662b12b46a84"
+    ]
+  },
+  "0x4ba104756d4c97830be639d4a520a724293b8cca": {
+    "Total PnL": "203897.20",
+    "Missing Prices": [
+      "0xb4d95811e77d162ed9d19a639c2ef7d63da5ae518959ca8a8bda662b12b46a84"
+    ]
+  },
+  "0x127041b93e8d8344c1479f7d384b46e5777ef8ac": {
+    "Total PnL": "-1.9454840234543245e+21",
+    "Missing Prices": [
+      "0xb4d95811e77d162ed9d19a639c2ef7d63da5ae518959ca8a8bda662b12b46a84",
+      "0x67536d38fd6f98d65631644586a4dfdaec2d26c8ac487cccebca642b628b7897",
+      "0xd703bfc357439e83578dcefdbcee9f53a197e3961cd164556841772c8260524a"
+    ]
+  },
+  "0xdcde39bb5a96c2ad29a7095b3671d998d07f2607": {
+    "Total PnL": "170262.38",
+    "Missing Prices": [
+      "0xb4d95811e77d162ed9d19a639c2ef7d63da5ae518959ca8a8bda662b12b46a84"
+    ]
+  },
+  "0xa829a1812a29f4a83acce9a3505884c4f3aa1803": {
+    "Total PnL": "241962680.62",
+    "Missing Prices": [
+      "0xd78a67c6f9569458831bb2df11e84cceddc84d37f0d1a5dfdf5ad4fdf632c527"
+    ]
+  },
+  "0x13973ddea749b72de69fb3b444c1ec4cb4dff15c": {
+    "Total PnL": "99460.47",
+    "Missing Prices": [
+      "0xcb38e5a1a2ca9eaa2bd4a0b01e6570d0d4edb8ca8298be7163b856d9a6ca9a8e",
+      "0x6b32327d656b87a297adba71598791faa02acbc67a9a39765d145c74afd34132"
+    ]
+  },
+  "0x360341aea66794feb1b8126dfce7e9e323b6a58c": {
+    "Total PnL": "6923108.48",
+    "Missing Prices": []
+  },
+  "0x7fa32e98c5f3c8594de1785e23905fb0c74bccd7": {
+    "Total PnL": "6630417.21",
+    "Missing Prices": [
+      "0x57b2e077380c84fa913ec595aa0240fed3b647a5561faf3a8dbc43fdd54f5098"
+    ]
+  },
+  "0x09998bd2f21d0897a2a32a39172dc484cdaa6064": {
+    "Total PnL": "10708.29",
+    "Missing Prices": []
+  },
+  "0x55ef94acae7d8cda13674f11f2bb41e2f42393c8": {
+    "Total PnL": "160667.33",
+    "Missing Prices": []
+  },
+  "0x54d58dab6e01f2f4a7769e53b60ca1866d85d00a": {
+    "Total PnL": "-20886.43",
+    "Missing Prices": []
+  },
+  "0x25fbf316751d305d6c4a7441966eaa6869865385": {
+    "Total PnL": "132895.25",
+    "Missing Prices": []
+  },
+  "0x509138568ee35c7fb746ed853a4498a4b2ac8df3": {
+    "Total PnL": "126293.12",
+    "Missing Prices": []
+  },
+  "0x2532f3634adfff5032b12c0bf88306e479844424": {
+    "Total PnL": "142448.19",
+    "Missing Prices": []
+  },
+  "0xa706bfeaea3ef10da33bee402ebfced7351d840b": {
+    "Total PnL": "43728.60",
+    "Missing Prices": []
+  },
+  "0x56b4e235b59af7aee41180d57c5ac63556dd5d5e": {
+    "Total PnL": "19708.99",
+    "Missing Prices": [
+      "0xed9fdb422cf90d287d7979c388f5a3046f2af83ea904d45bb41ca3528f43041f",
+      "0xa192981f9f8ae0f46715868dc6c3838b2763e808c8e78d1e8476fc509bfe8648"
+    ]
+  },
+  "0xca4bd73b86dabad35a35257685eaa24bfee31418": {
+    "Total PnL": "189079.05",
+    "Missing Prices": []
+  },
+  "0xb2aff94929b85df33e9d27ea55a1c99854517238": {
+    "Total PnL": "24918.13",
+    "Missing Prices": []
+  },
+  "0x687b09d26f72d55a2e7f3677d3ce261d3a8d2f3b": {
+    "Total PnL": "725.96",
+    "Missing Prices": [
+      "0x51d7e0a90c750abbdc3b3436a32a53ed48d86b7289ac01600593e38fbd2e483c",
+      "0x1da33ef456abfa49b85b12530027447545d7f14cbcbf79f7de94f57deab7ee00",
+      "0x851f4845cb9e03ca35f5be14e38053c855fd38a7a39ede65d84e1fd2725a0f38",
+      "0x3e822a20c344e7a6bd89ef33259084f1b6d086a02fdbb16066eaf55dcd451b80",
+      "0x462db98a1c551af6058f32cfb8a1f215d12e5849a423f74609eb84fc16c25e3a",
+      "0x7653401d93cf53fcf8949ff4fe63323f4a8594d449c1189c882288897d13d2b2",
+      "0x4e2fd1a48de0367bdaa530cbf2f32a570aaf075e6c575c383c60008246ec3e81",
+      "0x3622a408dda6de8b06a7cb8c7a23d142b4e72d9ff7e8551a2f35be250a42bfcd",
+      "0x5294af43f23b159fcbd45d3a63c35d7e2256cb24aed7b88bba80aee47dca30c2",
+      "0x3e25a2e36a376576e4f0394975318e23fa3c83df488431a2b5eeee8f0c95101c",
+      "0xbd488e931bceda705f1a6ecfa92d95371a22694a2ff3d3db4093b2b05ebc06f2",
+      "0x185ec0762a76157d70786d11aff33fc5d3e6caa553ae445ee905921c553d1e48",
+      "0xf1a2d0dc92d90219d56518362132e58f129bad664c01f7e97c46a78e9cd4bf5d",
+      "0x19dc21b330f7b653eb1991a7eb559958f7cc3350a476dae2e79f52053e8c9472",
+      "0xbb454fc0fa6d563167b59af7434474e1d6b86482f3d387eb4d734ea35d97e8c7",
+      "0x286089cc31a846331cb5933fff9a54b622ca9964d5729706d54e5ca1d64f8e63"
+    ]
+  },
+  "0xe7198d26f04a2a9da0b2c4b0d332bddd9a9f17ad": {
+    "Total PnL": "0.00",
+    "Missing Prices": [
+      "0xb6168a5134ad62ad35e2699534407ceb40cf64927292826962fc2b715c3e294f",
+      "0xcfaef72823ab681fa3192b7a9c2470f426e37685f52cfdba231fc9e15252aed8",
+      "0x2cb6cfa18a5d65641fa007ba8b631bd22da6180013388ecd087beb7a68f9719a",
+      "0x336f50ef17d4b47752a059f3d9b28537dbdbce2c01b1993c0321bdc49fa38325",
+      "0x602277467212f336ac50d78a70ca685f08e24774f502221a20671d5e7ea8c4fb",
+      "0xfa374e98dbb681e08648c434cfb6b652581387ebc6016f0a2e926d9752094225",
+      "0xa479e23a3d94a21a94df82a73ed64cacfef42920a410253eaf4f165a9059afcc",
+      "0xce76879d7ed0b0fa175c09c6656c896f2b1a8c995ca78004f7ab9fc5ef33d180",
+      "0x01271c7450a0eb5ff774c24d73079bf152ff5ba38b0c1aae6f773fdd22a27865",
+      "0xe340fd360f65e0641f85f147a6ec3195f8d2dbe2ed1ae99a8c265bdaf7c87bb0",
+      "0x9099834a00c40c3b33804ba1a6b9abe3967c80ccb5e3a140d312a559cf3a5ab4",
+      "0xe2d41bfbaafd2a869d8f9ecf644e5d5298ee589b1b28cfe01f4f0918d1b4cdb9",
+      "0xb53f83577668538e2d30fc2a54b53e5a6d36c0f5036029f91c72a13e0e3b04b0",
+      "0x9137474cf77e471d0e72e6aaee06cf85a23a414fee3b855c1524f9369699f542",
+      "0x405e603f1b270b42fd6bee165b469e44fea4ea5a1e920b62ccd4b744066e1c60",
+      "0x3e25a2e36a376576e4f0394975318e23fa3c83df488431a2b5eeee8f0c95101c",
+      "0xbd488e931bceda705f1a6ecfa92d95371a22694a2ff3d3db4093b2b05ebc06f2",
+      "0x185ec0762a76157d70786d11aff33fc5d3e6caa553ae445ee905921c553d1e48",
+      "0x2f6e26733de4c66880906d2445e8383c37c882f01984cafcc5edf23f14da74c6"
+    ]
+  },
+  "0x551e42ec9c796fde8e562d6070ce5940d51f1df1": {
+    "Total PnL": "0.00",
+    "Missing Prices": [
+      "0x405e603f1b270b42fd6bee165b469e44fea4ea5a1e920b62ccd4b744066e1c60",
+      "0x3e25a2e36a376576e4f0394975318e23fa3c83df488431a2b5eeee8f0c95101c",
+      "0xbd488e931bceda705f1a6ecfa92d95371a22694a2ff3d3db4093b2b05ebc06f2",
+      "0x185ec0762a76157d70786d11aff33fc5d3e6caa553ae445ee905921c553d1e48",
+      "0x2f6e26733de4c66880906d2445e8383c37c882f01984cafcc5edf23f14da74c6",
+      "0x95172611828418f9430c2b9963978cfeb5dcb3262e42e636e32cb3c21aaa377c",
+      "0x6b8441c5ab27a1ce0a90445dd010a5156e2a17ca4b6b3728d55c68fd036b716e",
+      "0xb120c5aca8ad1e85eeed2f0187475736c7b0943a97a1d6a9941fdfbe4eb43089",
+      "0x1d7936d836f4d840d64e62bc944ee50053505de1ce770569e2cdc2b177aaee6d",
+      "0xa743b6bf291553cd7ce7ccdf7e92630d9c22036f2a8cab19fd9dced364b47fec"
+    ]
+  }
+}
