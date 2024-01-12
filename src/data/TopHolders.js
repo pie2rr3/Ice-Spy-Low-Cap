@@ -1,5 +1,5 @@
 const axios = require('axios');
-const fs = require('fs');
+const fs = require('fs').promises;
 const { Alchemy, Network } = require("alchemy-sdk");
 
 const CHAINBASE_API_URL = 'https://api.chainbase.online/v1/token/top-holders';
@@ -27,63 +27,49 @@ async function isContract(address) {
 }
 
 async function getTopTokenHolders(tokenAddress, limit = 50) {
-  try {
-      const options = {
-          url: `${CHAINBASE_API_URL}?chain_id=1&contract_address=${tokenAddress}&page=1&limit=${limit}`,
-          method: 'GET',
-          headers: {
-              'x-api-key': CHAINBASE_API_KEY,
-              'accept': 'application/json'
-          }
-      };
-
-      const response = await axios(options);
-      let holders = response.data.data || [];
-
-      holders = await Promise.all(
-          holders.filter(holder => holder.wallet_address !== '0x000000000000000000000000000000000000dead')
-              .map(async holder => {
-                  const isContractAddress = await isContract(holder.wallet_address);
-                  return isContractAddress ? null : holder;
-              })
-      );
-
-      holders = holders.filter(holder => holder !== null).slice(0, limit);
-
-      return holders;
-  } catch (error) {
-      console.error(`Erreur lors de la récupération des top holders pour ${tokenAddress}:`, error);
-      return [];
-  }
+    try {
+        const response = await axios.get(`${CHAINBASE_API_URL}?chain_id=1&contract_address=${tokenAddress}&page=1&limit=${limit}`, {
+            headers: {
+                'x-api-key': CHAINBASE_API_KEY,
+                'accept': 'application/json'
+            }
+        });
+        return response.data.data || [];
+    } catch (error) {
+        console.error(`Erreur lors de la récupération des top holders pour ${tokenAddress}:`, error);
+        return [];
+    }
 }
 
 async function processTopTokens(limit) {
     try {
-        const trendingTokens = JSON.parse(fs.readFileSync(TRENDING_TOKENS_FILE, 'utf-8'));
+        const trendingTokens = JSON.parse(await fs.readFile(TRENDING_TOKENS_FILE, 'utf-8'));
         const results = {};
-  
+
         for (const token of trendingTokens) {
             console.log(`Récupération des top holders pour le token ${token.name}...`);
-            const holders = await getTopTokenHolders(token.address, limit);
-            results[token.name] = [];
-  
-            const uniqueWallets = new Set(); 
-  
-            for (const holder of holders) {
-                if (!uniqueWallets.has(holder.wallet_address)) {
-                    uniqueWallets.add(holder.wallet_address);
-                    results[token.name].push(holder);
-                }
-            }
-  
-            await sleep(2000);
+            let holders = await getTopTokenHolders(token.address, limit);
+            holders = holders.filter(holder => holder.wallet_address.toLowerCase() !== '0x000000000000000000000000000000000000dead');
+
+            const uniqueAddresses = [...new Set(holders.map(holder => holder.wallet_address))];
+
+            const contractChecks = await Promise.all(uniqueAddresses.map(async address => {
+                return { address, isContract: await isContract(address) };
+            }));
+
+            const contractMap = new Map(contractChecks.map(item => [item.address, item.isContract]));
+            results[token.name] = holders.filter(holder => !contractMap.get(holder.wallet_address));
+
+            await sleep(500);
         }
-  
-        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
+
+        await fs.writeFile(OUTPUT_FILE, JSON.stringify(results, null, 2));
         console.log('Résultats enregistrés dans:', OUTPUT_FILE);
     } catch (error) {
         console.error('Erreur lors du traitement des tokens:', error);
     }
-  }
+}
 
 module.exports = processTopTokens;
+
+// processTopTokens();

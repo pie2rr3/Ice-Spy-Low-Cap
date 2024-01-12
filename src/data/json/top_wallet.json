@@ -1,14 +1,137 @@
 {
-  "enqAI": [
+  "Pond Coin": [
     {
-      "wallet_address": "0x2f104e19f3e326743c92648c4e8428bac9af7951",
-      "balance": 0.04747945347950436
+      "wallet_address": "0x6fd80b18d73cd2f5f972b3c2829456cc16d6d543",
+      "balance": 0.8777334976868507
     },
     {
-      "wallet_address": "0x8b6d1618396a6f01067ae0a5239c39cfb843f327",
-      "balance": 0.04678002418750581
+      "wallet_address": "0x9729cb67d5b27d2b54bb86de5d690651c23b3873",
+      "balance": 0.047984046821425146
     }
   ],
-  "BOB": [],
-  "RabbitX": []
+  "HEX": [
+    {
+      "wallet_address": "0xa2e1734682c6a237c070d93019a7e0bf7047406c",
+      "balance": 0
+    },
+    {
+      "wallet_address": "0x2b1e78aa8c7459d42865627f7c6be21f3a2d2da2",
+      "balance": 0.48602799515479095
+    },
+    {
+      "wallet_address": "0x9a6a414d6f3497c05e3b1de90520765fa1e07c03",
+      "balance": 1.4379813339442764
+    },
+    {
+      "wallet_address": "0x2d2c2ff3345de305ea06c35c958b0a4fd774abda",
+      "balance": 0.1
+    },
+    {
+      "wallet_address": "0x705c053d69eb3b8acc7c404690bd297700ccf169",
+      "balance": 0.4021055316700981
+    },
+    {
+      "wallet_address": "0x3e7bc6503cbb1cf4490414fd899f85348d7cd58e",
+      "balance": 0.0305156706294689
+    },
+    {
+      "wallet_address": "0x4bdbb75f1995f966dbf79e7433424a94845dba00",
+      "balance": 0.076801368
+    },
+    {
+      "wallet_address": "0xbb5cbbf47f1a1741195c128c4d00457a4501c177",
+      "balance": 0.0427278496
+    }
+  ],
+  "MUBI": [
+    {
+      "wallet_address": "0xa07a669a02e9255f2daddf8e35e6ae693e05c31a",
+      "balance": 0.07397145469518288
+    },
+    {
+      "wallet_address": "0xf8a8b4c0c58d25079b52767bedd8f1671b0646ea",
+      "balance": 0.7038226522786217
+    },
+    {
+      "wallet_address": "0x6b7ada3fe5ccf3ab10a8e7ae7f4593b88b3bf385",
+      "balance": 0.22798329747421409
+    }
+  ],
+  "Memecoin": [
+    {
+      "wallet_address": "0x4391b5c74981d49f5413ef462f6692a156aef98e",
+      "balance": 0
+    },
+    {
+      "wallet_address": "0xf0c6fbc516a595392640cdd5839f9d7bc5ebc871",
+      "balance": 0.026202430524062528
+    }
+  ],
+  "TokenFi": [
+    {
+      "wallet_address": "0xddacad3b1edee8e2f5b2e84f658202534fcb0374",
+      "balance": 0.3053777068047819
+    },
+    {
+      "wallet_address": "0x6cf2022bac98f333354ed2812b869af766c801df",
+      "balance": 0.1519705021944082
+    },
+    {
+      "wallet_address": "0xfc75f2021e147eccc41a423e9a74066137f32916",
+      "balance": 0.209773129158957
+    }
+  ],
+  "Pepe": [],
+  "Flooring Lab Credit": [
+    {
+      "wallet_address": "0xb03e370b7caaaf8fe6091ece3902c1c62836e533",
+      "balance": 1.3574809362956195
+    },
+    {
+      "wallet_address": "0x88b65c6709c0d42154ab5bf24a4de63d7dfd67e5",
+      "balance": 0.3737577199417266
+    },
+    {
+      "wallet_address": "0xc72d07143878c3642300b3d924db24ed9d79808b",
+      "balance": 0.3991739688631861
+    },
+    {
+      "wallet_address": "0xe4c65eb4464034c83a8f1923d47f127680975830",
+      "balance": 0.3991712732518766
+    }
+  ],
+  "TROLL": [
+    {
+      "wallet_address": "0x69d7813e7443dea9a4f8a06235712647e17881dd",
+      "balance": 0.02797859627467962
+    },
+    {
+      "wallet_address": "0xa7a07e8f2cc38d2b6b62acc3bb31d1ba23c4c4b9",
+      "balance": 0
+    },
+    {
+      "wallet_address": "0x97b8dc4683514ae076490001fa39a02602ae97a0",
+      "balance": 0.09906284123846117
+    },
+    {
+      "wallet_address": "0x9bcb2c3cbf1073e47f3c5c31f8ae8c7b951bb016",
+      "balance": 0.4866139904304083
+    },
+    {
+      "wallet_address": "0x2cb01c02032918bbda115bac5879fee723ab52f9",
+      "balance": 0.05210850131763076
+    },
+    {
+      "wallet_address": "0x25cc0a77faf4578d16b3e24bcb33d4126aab6706",
+      "balance": 0.10671545277856859
+    },
+    {
+      "wallet_address": "0x3688d0ca68975a2794250cb4897591fd4a3da8d6",
+      "balance": 0.29417122515660155
+    },
+    {
+      "wallet_address": "0xe8f451db496ed3c47ec03f626566c2129ce55ca7",
+      "balance": 0.04024943082766271
+    }
+  ]
 }

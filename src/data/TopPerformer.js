@@ -1,15 +1,41 @@
 const axios = require('axios');
+const Moralis = require("moralis").default;
+const { EvmChain } = require("@moralisweb3/common-evm-utils");
 const fs = require('fs');
 
-const API_KEY_ETHERSCAN = '1S7HW5655DWV8BHKSIKD3F6XC2NJ4MBWWH';
-const API_KEY_COVALENT = 'cqt_rQdhGV6KmvHfTHBGVxJCgcyB3Tv9';
-const TOP_WALLETS_FILE_PATH = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_wallet.json';
-const OUTPUT_FILE_PATH = '/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_performer.json';
-const BASE_URL_ETHERSCAN = `https://api.etherscan.io/api`;
+const etherscanApiKey = '1S7HW5655DWV8BHKSIKD3F6XC2NJ4MBWWH';
+const moralisApiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjVmYjdlZmU0LTRjNGUtNDQzNy05YWI1LTM2ZTI0NjM1OGM0MSIsIm9yZ0lkIjoiMzY3MTQ3IiwidXNlcklkIjoiMzc3MzMxIiwidHlwZUlkIjoiOGNiODA3YzMtNjYwYy00YzQzLWI3YzctOWZiYWJlODhhYjBjIiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3MDE4NzQ4NjUsImV4cCI6NDg1NzYzNDg2NX0.FP4vj42SkE_n9RRl1r7uPS-x9lBneS_EcWczi1F7LNA"; 
 
-async function fetchTokenTransactions(walletAddress) {
+async function fetchHistoricalPriceByBlock(contractAddress, blockNumber) {
     try {
-        const response = await axios.get(`${BASE_URL_ETHERSCAN}?module=account&action=tokentx&address=${walletAddress}&page=1&offset=20&sort=desc&apikey=${API_KEY_ETHERSCAN}`);
+        const response = await Moralis.EvmApi.token.getTokenPrice({
+            address: contractAddress,
+            chain: EvmChain.ETHEREUM,
+            toBlock: blockNumber,
+        });
+        return response?.raw?.usdPrice || null;
+    } catch (error) {
+        return null;
+    }
+}
+
+async function fetchCurrentTokenPrice(contractAddress) {
+    try {
+        const response = await Moralis.EvmApi.token.getTokenPrice({
+            address: contractAddress,
+            chain: EvmChain.ETHEREUM,
+        });
+
+        return response?.raw?.usdPrice || null;
+    } catch (error) {
+        return null;
+    }
+}
+
+async function fetchAllTokenTransactions(walletAddress) {
+    const url = `https://api.etherscan.io/api?module=account&action=tokentx&address=${walletAddress}&page=1&offset=20&sort=desc&apikey=${etherscanApiKey}`;
+    try {
+        const response = await axios.get(url);
         return response.data.result;
     } catch (error) {
         console.error('Error fetching token transactions:', error);
@@ -17,144 +43,115 @@ async function fetchTokenTransactions(walletAddress) {
     }
 }
 
-function classifyTransactions(transactions, walletAddress) {
-    const classifiedTransactions = {};
-
-    transactions.forEach(transaction => {
-        const tokenSymbol = transaction.tokenSymbol;
-        if (!classifiedTransactions[tokenSymbol]) {
-            classifiedTransactions[tokenSymbol] = { buys: [], sells: [] };
-        }
-
-        if (transaction.to.toLowerCase() === walletAddress.toLowerCase()) {
-            classifiedTransactions[tokenSymbol].buys.push(transaction);
-        } else if (transaction.from.toLowerCase() === walletAddress.toLowerCase()) {
-            classifiedTransactions[tokenSymbol].sells.push(transaction);
-        }
-    });
-
-    return classifiedTransactions;
-}
-
-
-async function fetchHistoricalPrice(chainName, quoteCurrency, contractAddress, date) {
-    try {
-        const response = await axios.get(`https://api.covalenthq.com/v1/pricing/historical_by_addresses_v2/${chainName}/${quoteCurrency}/${contractAddress}/`, {
-            params: {
-                from: date,
-                to: date,
-                'prices-at-asc': true
-            },
-            headers: { 'Authorization': `Bearer ${API_KEY_COVALENT}` }
-        });
-
-        if (response.data && response.data.data && response.data.data[0] && response.data.data[0].prices && response.data.data[0].prices[0]) {
-            return response.data.data[0].prices[0].price;
-        } else {
-            console.log(`No price data available for ${contractAddress} on ${date}`);
-            return null;
-        }
-    } catch (error) {
-        console.error('Error fetching historical price:', error);
-        return null;
-    }
-}
-
-
-
-function formatDate(timestamp) {
-    const date = new Date(timestamp * 1000);
-    return date.toISOString().split('T')[0];
-}
-
-async function enrichTransactionsWithPrices(classifiedTransactions) {
-    for (const tokenSymbol of Object.keys(classifiedTransactions)) {
-        const tokenTransactions = classifiedTransactions[tokenSymbol];
-        for (const transaction of tokenTransactions.buys) {
-            const date = formatDate(transaction.timeStamp);
-            transaction.priceAtTransaction = await fetchHistoricalPrice('eth-mainnet', 'USD', transaction.contractAddress, date);
-        }
-        for (const transaction of tokenTransactions.sells) {
-            const date = formatDate(transaction.timeStamp);
-            transaction.priceAtTransaction = await fetchHistoricalPrice('eth-mainnet', 'USD', transaction.contractAddress, date);
-        }
-    }
-}
-
-function calculateProfit(transactions) {
-    const profits = {};
-    let totalTrades = 0;
+async function calculatePnLForToken(tokenAddress, transactions, walletAddress) {
+    let totalInvestment = 0;
+    let totalRevenue = 0;
+    let totalTokens = 0;
+    let totalBought = 0;
+    let totalSold = 0;
     let profitableTrades = 0;
+    let missingPrices = [];
 
-    Object.keys(transactions).forEach(tokenSymbol => {
-        let totalBuyCost = 0;
-        let totalSellRevenue = 0;
-
-        transactions[tokenSymbol].buys.forEach(tx => {
-            if (tx.priceAtTransaction) {
-                const amount = parseFloat(tx.value) / Math.pow(10, parseInt(tx.tokenDecimal));
-                totalBuyCost += amount * tx.priceAtTransaction;
-                totalTrades++;
+    for (const tx of transactions) {
+        const amount = parseFloat(tx.value) / Math.pow(10, parseInt(tx.tokenDecimal));
+        if (tx.to.toLowerCase() === walletAddress.toLowerCase()) {
+            const buyPrice = await fetchHistoricalPriceByBlock(tokenAddress, tx.blockNumber);
+            if (buyPrice !== null) {
+                totalInvestment += amount * buyPrice;
+                totalBought += amount;
+            } else {
+                missingPrices.push(tx.hash);
             }
-        });
-
-        transactions[tokenSymbol].sells.forEach(tx => {
-            if (tx.priceAtTransaction) {
-                const amount = parseFloat(tx.value) / Math.pow(10, parseInt(tx.tokenDecimal));
-                totalSellRevenue += amount * tx.priceAtTransaction;
-                totalTrades++;
-                if (totalSellRevenue > totalBuyCost) {
+            totalTokens += amount;
+        } else if (tx.from.toLowerCase() === walletAddress.toLowerCase()) {
+            const sellPrice = await fetchHistoricalPriceByBlock(tokenAddress, tx.blockNumber);
+            if (sellPrice !== null) {
+                totalRevenue += amount * sellPrice;
+                totalSold += amount;
+                if (sellPrice > buyPrice) {
                     profitableTrades++;
                 }
+            } else {
+                missingPrices.push(tx.hash);
             }
-        });
+            totalTokens -= amount;
+        }
+    }
 
-        profits[tokenSymbol] = totalSellRevenue - totalBuyCost;
-    });
+    let currentValue = 0;
+    if (totalTokens > 0) {
+        const currentPrice = await fetchCurrentTokenPrice(tokenAddress);
+        currentValue = totalTokens * Math.max(0, currentPrice || 0);
+    }
 
-    return { profits, totalTrades, profitableTrades };
+    let pnl = totalTokens > 0 ? currentValue + totalRevenue - totalInvestment : totalRevenue - totalInvestment;
+
+    return {
+        totalBought,
+        totalSold,
+        totalInvestment: totalInvestment.toFixed(2),
+        currentValue: currentValue.toFixed(2),
+        pnl: pnl.toFixed(2),
+        missingPrices,
+        profitableTrades,
+        totalTrades: transactions.length
+    };
 }
 
+  
 
-async function analyzeWallet(walletAddress) {
-    const rawTransactions = await fetchTokenTransactions(walletAddress);
-    const classifiedTransactions = classifyTransactions(rawTransactions, walletAddress);
-    await enrichTransactionsWithPrices(classifiedTransactions);
-
-    return calculateProfit(classifiedTransactions);
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
-
 
 async function main() {
-    const data = JSON.parse(fs.readFileSync(TOP_WALLETS_FILE_PATH, 'utf8'));
-    const walletAddresses = new Set();
-    const filteredWallets = {};
+    await Moralis.start({ apiKey: moralisApiKey });
 
-    for (const token in data) {
-        data[token].forEach(walletInfo => {
-            walletAddresses.add(walletInfo.wallet_address);
-        });
-    }
+    const topWalletsData = JSON.parse(fs.readFileSync('/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_wallet.json', 'utf8'));
+    const topPerformersResults = {};
 
-    let walletIndex = 0;
-    const totalWallets = walletAddresses.size;
+    let walletProcessed = 0;
+    const totalWallets = Object.keys(topWalletsData).reduce((acc, key) => acc + topWalletsData[key].length, 0);
 
-    for (const walletAddress of walletAddresses) {
-        console.log(`Analyse complète du wallet ${walletAddress} (${walletIndex + 1}/${totalWallets})`);
-        const analysis = await analyzeWallet(walletAddress);
-        const profitability = (analysis.profitableTrades / analysis.totalTrades) * 100;
+    for (const group in topWalletsData) {
+        const wallets = topWalletsData[group];
 
-        if (analysis.profitableTrades >= 3 && profitability >= 60) {
-            filteredWallets[walletAddress] = analysis.profits;
+        for (const wallet of wallets) {
+            const walletAddress = wallet.wallet_address;
+            const allTransactions = await fetchAllTokenTransactions(walletAddress);
+            const tokens = new Set(allTransactions.map(tx => tx.contractAddress));
+            let totalPnL = 0;
+            let uniqueMissingPrices = new Set();
+            let totalProfitableTrades = 0;
+            let totalTrades = 0;
+
+            for (const token of tokens) {
+                const tokenTransactions = allTransactions.filter(tx => tx.contractAddress === token);
+                const pnlResult = await calculatePnLForToken(token, tokenTransactions, walletAddress);
+                totalPnL += parseFloat(pnlResult.pnl);
+                pnlResult.missingPrices.forEach(price => uniqueMissingPrices.add(price));
+                totalProfitableTrades += pnlResult.profitableTrades;
+                totalTrades += pnlResult.totalTrades;
+            }
+
+            let profitableTradesPercentage = totalTrades > 0 ? (totalProfitableTrades / totalTrades) * 100 : 0;
+
+            if (totalProfitableTrades >= 3 && profitableTradesPercentage >= 60) {
+                topPerformersResults[walletAddress] = { 
+                    "Total PnL": totalPnL.toFixed(2), 
+                    "Missing Prices": Array.from(uniqueMissingPrices) 
+                };
+            }
+
+            walletProcessed++;
+            console.log(`Analyse du pnl pour le wallet ${walletAddress} terminée (${walletProcessed}/${totalWallets})`);
         }
-
-        walletIndex++;
     }
 
-    fs.writeFileSync(OUTPUT_FILE_PATH, JSON.stringify(filteredWallets, null, 2));
-    console.log(`Filtered ${walletIndex} wallets that meet the criteria.`);
-    console.log(`All wallet analyses saved to ${OUTPUT_FILE_PATH}`);
+    fs.writeFileSync('/Users/pierre/Desktop/XD/git/Ice-Spy-Low-Cap copie/src/data/json/top_performer.json', JSON.stringify(topPerformersResults, null, 2));
+    console.log('Résultats du PnL sauvegardés dans top_performer.json');
 }
 
-module.exports = main
-// main();
+// module.exports = main;
+
+main();

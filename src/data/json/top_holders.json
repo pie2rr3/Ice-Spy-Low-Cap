@@ -1,62 +1,348 @@
 {
-  "enqAI": [
+  "Pond Coin": [
     {
-      "amount": "53590279.540538931183013959",
-      "original_amount": "53590279540538931183013959",
-      "usd_value": "0.000000",
-      "wallet_address": "0xeb627fcf91a920b3648eced741373b4cf0e20622"
+      "amount": "2076603530213.057189387061305422",
+      "original_amount": "2076603530213057189387061305422",
+      "usd_value": "948528.563224",
+      "wallet_address": "0x75e89d5979e4f6fba9f97c104c2f0afb3f1dcb88"
     },
     {
-      "amount": "39577139.750000000000000000",
-      "original_amount": "39577139750000000000000000",
-      "usd_value": "0.000000",
-      "wallet_address": "0x2f104e19f3e326743c92648c4e8428bac9af7951"
+      "amount": "1589807866244.866587427320019045",
+      "original_amount": "1589807866244866587427320019045",
+      "usd_value": "726175.290194",
+      "wallet_address": "0x40fa5b555b83676e203dac4cfb70fd13a53bf6a7"
     },
     {
-      "amount": "38824542.460820090000000000",
-      "original_amount": "38824542460820090000000000",
-      "usd_value": "0.000000",
-      "wallet_address": "0xa4203f0d44ed75edc18471be1e1f770a3210f22c"
+      "amount": "1060061024042.846151662394588338",
+      "original_amount": "1060061024042846151662394588338",
+      "usd_value": "484203.241223",
+      "wallet_address": "0x6fd80b18d73cd2f5f972b3c2829456cc16d6d543"
     },
     {
-      "amount": "24587034.550828800000000000",
-      "original_amount": "24587034550828800000000000",
-      "usd_value": "0.000000",
-      "wallet_address": "0x8b6d1618396a6f01067ae0a5239c39cfb843f327"
+      "amount": "960368018511.670079308601366644",
+      "original_amount": "960368018511670079308601366644",
+      "usd_value": "438666.545400",
+      "wallet_address": "0x9729cb67d5b27d2b54bb86de5d690651c23b3873"
+    },
+    {
+      "amount": "881986291109.883238701198978804",
+      "original_amount": "881986291109883238701198978804",
+      "usd_value": "402864.185348",
+      "wallet_address": "0xc5a678ef0ea74a432757a5f778510a514de9eb3a"
+    },
+    {
+      "amount": "780000000000.581016995848769432",
+      "original_amount": "780000000000581016995848769432",
+      "usd_value": "356279.987273",
+      "wallet_address": "0xc09aadf8700408777e01ad7d32d19e7f89bc3e3c"
+    },
+    {
+      "amount": "733188805695.297564713848450060",
+      "original_amount": "733188805695297564713848450060",
+      "usd_value": "334898.074822",
+      "wallet_address": "0x86968e48b392f8ca9f08ef439bbc3e1c69481d4f"
     }
   ],
-  "BOB": [
+  "HEX": [
     {
-      "amount": "90561221871.419056575336113566",
-      "original_amount": "90561221871419056575336113566",
-      "usd_value": "2716836.587510",
-      "wallet_address": "0xd6216fc19db775df9774a6e33526131da7d19a2c"
+      "amount": "250628664034.22069465",
+      "original_amount": "25062866403422069465",
+      "usd_value": "2351708150.964524",
+      "wallet_address": "0x075e72a5edf65f0a5f44699c7654c1a76941ddc8"
     },
     {
-      "amount": "65522809854.362665855887330869",
-      "original_amount": "65522809854362665855887330869",
-      "usd_value": "1965684.245974",
+      "amount": "100000000555.55000000",
+      "original_amount": "10000000055555000000",
+      "usd_value": "938323704.150750",
+      "wallet_address": "0xa2e1734682c6a237c070d93019a7e0bf7047406c"
+    },
+    {
+      "amount": "2677016090.04346415",
+      "original_amount": "267701609004346415",
+      "usd_value": "25119076.397258",
+      "wallet_address": "0x2b1e78aa8c7459d42865627f7c6be21f3a2d2da2"
+    },
+    {
+      "amount": "1189091121.95127282",
+      "original_amount": "118909112195127282",
+      "usd_value": "11157523.799235",
+      "wallet_address": "0x9a6a414d6f3497c05e3b1de90520765fa1e07c03"
+    },
+    {
+      "amount": "980136755.00000000",
+      "original_amount": "98013675500000000",
+      "usd_value": "9196855.454166",
+      "wallet_address": "0x2d2c2ff3345de305ea06c35c958b0a4fd774abda"
+    },
+    {
+      "amount": "735750266.20066362",
+      "original_amount": "73575026620066362",
+      "usd_value": "6903719.112759",
+      "wallet_address": "0x705c053d69eb3b8acc7c404690bd297700ccf169"
+    },
+    {
+      "amount": "602474955.64541795",
+      "original_amount": "60247495564541795",
+      "usd_value": "5653165.288987",
+      "wallet_address": "0x3e7bc6503cbb1cf4490414fd899f85348d7cd58e"
+    },
+    {
+      "amount": "312574406.29218783",
+      "original_amount": "31257440629218783",
+      "usd_value": "2932959.731054",
+      "wallet_address": "0x4bdbb75f1995f966dbf79e7433424a94845dba00"
+    },
+    {
+      "amount": "227200130.04741546",
+      "original_amount": "22720013004741546",
+      "usd_value": "2131872.664253",
+      "wallet_address": "0xbb5cbbf47f1a1741195c128c4d00457a4501c177"
+    }
+  ],
+  "MUBI": [
+    {
+      "amount": "57113677.415823236370669170",
+      "original_amount": "57113677415823236370669170",
+      "usd_value": "0.000000",
+      "wallet_address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe"
+    },
+    {
+      "amount": "46492977.988626505324258528",
+      "original_amount": "46492977988626505324258528",
+      "usd_value": "0.000000",
       "wallet_address": "0x3cc936b795a188f0e246cbb2d74c5bd190aecf18"
     },
     {
-      "amount": "60011395390.588888503113735033",
-      "original_amount": "60011395390588888503113735033",
-      "usd_value": "1800341.816237",
-      "wallet_address": "0xf89d7b9c864f589bbf53a82105107622b35eaa40"
-    }
-  ],
-  "RabbitX": [
-    {
-      "amount": "24173095.882634708996057310",
-      "original_amount": "24173095882634708996057310",
-      "usd_value": "5765670.207486",
-      "wallet_address": "0x5aa4e90dc2452195a5e5654f549df0f2bc5d9996"
+      "amount": "34869129.365059621018688237",
+      "original_amount": "34869129365059621018688237",
+      "usd_value": "0.000000",
+      "wallet_address": "0xc882b111a75c0c657fc507c04fbfcd2cc984f071"
     },
     {
-      "amount": "20219699.580388750322901510",
-      "original_amount": "20219699580388750322901510",
-      "usd_value": "4822721.923621",
-      "wallet_address": "0x1025dfb14f3f18f68093c7cd071757b1baf7f54f"
+      "amount": "26185901.566066873175000000",
+      "original_amount": "26185901566066873175000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0x51971c86b04516062c1e708cdc048cb04fbe959f"
+    },
+    {
+      "amount": "11940294.308045560600853185",
+      "original_amount": "11940294308045560600853185",
+      "usd_value": "0.000000",
+      "wallet_address": "0xd6216fc19db775df9774a6e33526131da7d19a2c"
+    },
+    {
+      "amount": "7292156.570960383480102081",
+      "original_amount": "7292156570960383480102081",
+      "usd_value": "0.000000",
+      "wallet_address": "0xa07a669a02e9255f2daddf8e35e6ae693e05c31a"
+    },
+    {
+      "amount": "7182024.689037213215650655",
+      "original_amount": "7182024689037213215650655",
+      "usd_value": "0.000000",
+      "wallet_address": "0xf8a8b4c0c58d25079b52767bedd8f1671b0646ea"
+    },
+    {
+      "amount": "6588132.184832056339379628",
+      "original_amount": "6588132184832056339379628",
+      "usd_value": "0.000000",
+      "wallet_address": "0x6b7ada3fe5ccf3ab10a8e7ae7f4593b88b3bf385"
+    }
+  ],
+  "Memecoin": [
+    {
+      "amount": "4200000000.000000000000000000",
+      "original_amount": "4200000000000000000000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0xf977814e90da44bfa03b6295a0616a897441acec"
+    },
+    {
+      "amount": "1035000000.000000000000000000",
+      "original_amount": "1035000000000000000000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0x4391b5c74981d49f5413ef462f6692a156aef98e"
+    },
+    {
+      "amount": "829412102.518090050000000000",
+      "original_amount": "829412102518090050000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0x6cc5f688a315f3dc28a7781717a9a798a59fda7b"
+    },
+    {
+      "amount": "382785710.503413600000000000",
+      "original_amount": "382785710503413600000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0xf0c6fbc516a595392640cdd5839f9d7bc5ebc871"
+    }
+  ],
+  "TokenFi": [
+    {
+      "amount": "69792544.819900256",
+      "original_amount": "69792544819900256",
+      "usd_value": "0.000000",
+      "wallet_address": "0xd6216fc19db775df9774a6e33526131da7d19a2c"
+    },
+    {
+      "amount": "60000000.000000000",
+      "original_amount": "60000000000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0xddacad3b1edee8e2f5b2e84f658202534fcb0374"
+    },
+    {
+      "amount": "51274771.173747154",
+      "original_amount": "51274771173747154",
+      "usd_value": "0.000000",
+      "wallet_address": "0xf89d7b9c864f589bbf53a82105107622b35eaa40"
+    },
+    {
+      "amount": "22723547.659587448",
+      "original_amount": "22723547659587448",
+      "usd_value": "0.000000",
+      "wallet_address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe"
+    },
+    {
+      "amount": "18268810.353337946",
+      "original_amount": "18268810353337946",
+      "usd_value": "0.000000",
+      "wallet_address": "0x6cf2022bac98f333354ed2812b869af766c801df"
+    },
+    {
+      "amount": "14650829.776220184",
+      "original_amount": "14650829776220184",
+      "usd_value": "0.000000",
+      "wallet_address": "0xfc75f2021e147eccc41a423e9a74066137f32916"
+    }
+  ],
+  "Pepe": [
+    {
+      "amount": "26747271233292.974386418602696432",
+      "original_amount": "26747271233292974386418602696432",
+      "usd_value": "36424675.778091",
+      "wallet_address": "0x6cc5f688a315f3dc28a7781717a9a798a59fda7b"
+    },
+    {
+      "amount": "12100360218530.412977263899638045",
+      "original_amount": "12100360218530412977263899638045",
+      "usd_value": "16478379.940660",
+      "wallet_address": "0xf89d7b9c864f589bbf53a82105107622b35eaa40"
+    },
+    {
+      "amount": "8855018040596.742815116717907135",
+      "original_amount": "8855018040596742815116717907135",
+      "usd_value": "12058843.622762",
+      "wallet_address": "0xf3b0073e3a7f747c7a38b36b805247b222c302a3"
+    },
+    {
+      "amount": "8251477215684.136887747289069679",
+      "original_amount": "8251477215684136887747289069679",
+      "usd_value": "11236936.270997",
+      "wallet_address": "0x28c6c06298d514db089934071355e5743bf21d60"
+    },
+    {
+      "amount": "5958222409698.070394680991951482",
+      "original_amount": "5958222409698070394680991951482",
+      "usd_value": "8113961.143702",
+      "wallet_address": "0x16b2b042f15564bb8585259f535907f375bdc415"
+    },
+    {
+      "amount": "5530454607686.057011330000000000",
+      "original_amount": "5530454607686057011330000000000",
+      "usd_value": "7531423.083625",
+      "wallet_address": "0x46f80018211d5cbbc988e853a8683501fca4ee9b"
+    },
+    {
+      "amount": "5275970791594.006940200356711467",
+      "original_amount": "5275970791594006940200356711467",
+      "usd_value": "7184864.722173",
+      "wallet_address": "0xd6216fc19db775df9774a6e33526131da7d19a2c"
+    },
+    {
+      "amount": "4689326970496.674421557873660843",
+      "original_amount": "4689326970496674421557873660843",
+      "usd_value": "6385967.862964",
+      "wallet_address": "0x9cd6140c2de8af7595629bcca099497f0c28b2a9"
+    }
+  ],
+  "Flooring Lab Credit": [
+    {
+      "amount": "9295500000.000000000000000000",
+      "original_amount": "9295500000000000000000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0xb03e370b7caaaf8fe6091ece3902c1c62836e533"
+    },
+    {
+      "amount": "6000000000.000000000000000000",
+      "original_amount": "6000000000000000000000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0x88b65c6709c0d42154ab5bf24a4de63d7dfd67e5"
+    },
+    {
+      "amount": "5000000000.000000000000000000",
+      "original_amount": "5000000000000000000000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0xc72d07143878c3642300b3d924db24ed9d79808b"
+    },
+    {
+      "amount": "1250000000.000000000000000000",
+      "original_amount": "1250000000000000000000000000",
+      "usd_value": "0.000000",
+      "wallet_address": "0xe4c65eb4464034c83a8f1923d47f127680975830"
+    }
+  ],
+  "TROLL": [
+    {
+      "amount": "40775226959405.785841887776022352",
+      "original_amount": "40775226959405785841887776022352",
+      "usd_value": "249737.747029",
+      "wallet_address": "0x69d7813e7443dea9a4f8a06235712647e17881dd"
+    },
+    {
+      "amount": "40000000000069.000000000000000000",
+      "original_amount": "40000000000069000000000000000000",
+      "usd_value": "244989.681875",
+      "wallet_address": "0xa7a07e8f2cc38d2b6b62acc3bb31d1ba23c4c4b9"
+    },
+    {
+      "amount": "25991934109594.913174405415790839",
+      "original_amount": "25991934109594913174405415790839",
+      "usd_value": "159193.891720",
+      "wallet_address": "0x97b8dc4683514ae076490001fa39a02602ae97a0"
+    },
+    {
+      "amount": "19883392676704.207482113915971797",
+      "original_amount": "19883392676704207482113915971797",
+      "usd_value": "121780.651161",
+      "wallet_address": "0x9bcb2c3cbf1073e47f3c5c31f8ae8c7b951bb016"
+    },
+    {
+      "amount": "18226117499042.569348088488503127",
+      "original_amount": "18226117499042569348088488503127",
+      "usd_value": "111630.268197",
+      "wallet_address": "0x2cb01c02032918bbda115bac5879fee723ab52f9"
+    },
+    {
+      "amount": "13470818301204.549690430257036467",
+      "original_amount": "13470818301204549690430257036467",
+      "usd_value": "82505.287255",
+      "wallet_address": "0x25cc0a77faf4578d16b3e24bcb33d4126aab6706"
+    },
+    {
+      "amount": "13396941520274.127217739653671904",
+      "original_amount": "13396941520274127217739653671904",
+      "usd_value": "82052.811029",
+      "wallet_address": "0x2567b5f22c4c11933f4eaf35baf031b28609e024"
+    },
+    {
+      "amount": "12000000000000.000000000000000000",
+      "original_amount": "12000000000000000000000000000000",
+      "usd_value": "73496.904562",
+      "wallet_address": "0x3688d0ca68975a2794250cb4897591fd4a3da8d6"
+    },
+    {
+      "amount": "10000000000000.000000471235265176",
+      "original_amount": "10000000000000000000471235265176",
+      "usd_value": "61247.420469",
+      "wallet_address": "0xe8f451db496ed3c47ec03f626566c2129ce55ca7"
     }
   ]
 }

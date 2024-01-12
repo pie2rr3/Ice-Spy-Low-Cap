@@ -1,23 +1,58 @@
 [
   {
-    "address": "0x710287d1d39dcf62094a83ebb3e736e79400068a",
-    "marketCap": "33757462.06316",
-    "name": "enqAI",
-    "symbol": "ENQAI",
-    "volume": "5010174"
+    "address": "0x423f4e6138e475d85cf7ea071ac92097ed631eea",
+    "marketCap": "195492092.757420395",
+    "name": "Pond Coin",
+    "symbol": "PNDC",
+    "volume": "6129694"
   },
   {
-    "address": "0x7d8146cf21e8d7cbe46054e01588207b51198729",
-    "marketCap": "22072615.673061",
-    "name": "BOB",
-    "symbol": "BOB",
-    "volume": "2432373"
+    "address": "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39",
+    "marketCap": "5444861147.4031678349598058443987",
+    "name": "HEX",
+    "symbol": "HEX",
+    "volume": "3753126"
   },
   {
-    "address": "0x3ba925fdeae6b46d0bb4d424d829982cb2f7309e",
-    "marketCap": "238238911.876",
-    "name": "RabbitX",
-    "symbol": "RBX",
-    "volume": "3844967"
+    "address": "0x38e382f74dfb84608f3c1f10187f6bef5951de93",
+    "marketCap": "149974174.872225315874175569954934374098",
+    "name": "MUBI",
+    "symbol": "MUBI",
+    "volume": "4319308"
+  },
+  {
+    "address": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
+    "marketCap": "1782520286.9982",
+    "name": "Memecoin",
+    "symbol": "MEME",
+    "volume": "1761689"
+  },
+  {
+    "address": "0x4507cef57c46789ef8d1a19ea45f4216bae2b528",
+    "marketCap": "162701529.571",
+    "name": "TokenFi",
+    "symbol": "TOKEN",
+    "volume": "972742"
+  },
+  {
+    "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+    "marketCap": "570049593.92514580446757431333647690865836",
+    "name": "Pepe",
+    "symbol": "PEPE",
+    "volume": "4550007"
+  },
+  {
+    "address": "0x102c776ddb30c754ded4fdcc77a19230a60d4e4f",
+    "marketCap": "340035371.105",
+    "name": "Flooring Lab Credit",
+    "symbol": "FLC",
+    "volume": "7569763"
+  },
+  {
+    "address": "0xf8ebf4849f1fa4faf0dff2106a173d3a6cb2eb3a",
+    "marketCap": "6851590.5963357372",
+    "name": "TROLL",
+    "symbol": "TROLL",
+    "volume": "1943117"
   }
 ]
